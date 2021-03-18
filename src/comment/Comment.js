@@ -49,18 +49,29 @@ function Comment ({data}) {
                             <textarea className="form-control" value={message} onChange={(e) => setMessage(e.target.value)}/>
                         </div>
 
-                        <div className="gravatar">
-                        <Gravatar email={email} size={100}/>
-                        </div>
-            
                         <div className="form-group my-3">
                             <button className="mt-3 Comment__submit-btn">Submit</button>
                         </div>
 
                     </form>    
                     
-                  <div>{res.email}</div>
-                  <div>{res.message}</div>
+                    <article className="Comment-Post">
+
+				        <header>
+					        <div className="Comment__email">
+                                {res.email}
+					        </div>
+				        </header>
+
+				        <div className="Comment__image">
+                            <Gravatar email={email} />
+				        </div>
+
+				        <div className="Comment__content">
+                            {res.message} 
+				        </div>
+
+			        </article>
                   
             </div>  
         </div>     
