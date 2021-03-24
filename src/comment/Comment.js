@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Gravatar from 'react-gravatar'
+import Modal from '../Modal';
 import './Comment.scss';
+import MyComponent from '../Moment';
 
 
 function Comment ({data}) {
@@ -8,8 +10,9 @@ function Comment ({data}) {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
     const [res,setRes] = useState({})
+    const [isOpen, setIsOpen] = useState(false)
     
-    function   submit(e) {
+    function  submit(e) {
         e.preventDefault();
         const body = {
             email, message
@@ -64,7 +67,7 @@ function Comment ({data}) {
 				        </header>
 
 				        <div className="Comment__image">
-                            <Gravatar email={email} />
+                            <Gravatar email={email} onClick={() => setIsOpen(true)} />
 				        </div>
 
 				        <div className="Comment__content">
@@ -72,6 +75,23 @@ function Comment ({data}) {
 				        </div>
 
 			        </article>
+
+
+                    <Modal open={isOpen} onClose={() => setIsOpen(false)} >
+
+                        <div>
+
+					        <div>
+                                Email: {res.email}
+					        </div>
+
+                            <div className="created">         
+                            Created: <MyComponent/>              
+					        </div>
+
+				        </div>
+
+                    </Modal>
                   
             </div>  
         </div>     
