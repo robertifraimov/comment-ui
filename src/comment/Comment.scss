@@ -9,6 +9,7 @@
     @extend .w-100;
     background: #f54555;
     border-color: #f54555;
+    margin-bottom: 30px;
   }
 }
 
@@ -63,4 +64,8 @@
 .created {
   margin-top: 30px;
   margin-bottom: 30px;
+}
+
+label {
+  margin-bottom: 5px;
 }

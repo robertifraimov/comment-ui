@@ -10,14 +10,13 @@ import {
 } from "react-router-dom";
 
 
-
 function App() {
   return (
     <Router>
 
       <div className="App">
 
-      <Header/>
+        <Header/>
         <Switch>
           <Route path="/" exact component={Comment} />
           <Route path="/search" component={Search} />
