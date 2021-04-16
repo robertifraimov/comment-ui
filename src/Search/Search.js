@@ -28,7 +28,8 @@ export default function Search() {
         function hasNoResults () {
             return users.length === 0 && query.length > 0;
         }
-    
+
+
 
     return (
         <div className="Comment d-flex justify-content-center">

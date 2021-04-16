@@ -1,9 +1,9 @@
+
 import React, { useState } from 'react';
 import Gravatar from 'react-gravatar'
 import Modal from '../Modal/Modal';
 import MyComponent from '../Moment';
 import './Comment.scss';
-
 
 
 function Comment ({data}) {
@@ -76,7 +76,7 @@ function Comment ({data}) {
 				        </div>
 
 			        </article>
-
+                
 
                     <Modal open={isOpen} onClose={() => setIsOpen(false)} >
 
